@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Compile the HelloWorld.java file using javac (if you're not using Maven)
+                // Compile the helloworld.java file using javac (if you're not using Maven)
                 script {
                     bat 'javac helloworld.java'
                 }
