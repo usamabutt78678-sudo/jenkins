@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Define environment variables for JDK and MAVEN_HOME if necessary
-        JAVA_HOME = 'C:\\Program Files\\OpenJDK\\jdk-11.0.11'
+        JAVA_HOME = 'C:\Program Files\Java\jdk-21'
         MAVEN_HOME = 'C:\\apache-maven-3.8.1'
         PATH = "${JAVA_HOME}\\bin;${MAVEN_HOME}\\bin;${env.PATH}"
     }
@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the source code from the repository
-                git 'https://github.com/your-repo/your-java-project.git'
+                git 'https://github.com/usamabutt78678-sudo/jenkins.git'
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 // Compile the HelloWorld.java file using javac (if you're not using Maven)
                 script {
-                    bat 'javac HelloWorld.java'
+                    bat 'javac helloworld.java'
                 }
             }
         }
@@ -59,3 +59,4 @@ pipeline {
         }
     }
 }
+
